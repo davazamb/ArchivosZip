@@ -41,7 +41,7 @@ namespace ArchivosZip.Controllers
                         zip.AddFile(file.FilePath, "Files");
                     }
                 }
-                string zipName = String.Format("Comprimido_{0}.zip", DateTime.Now.ToString("yyyy-MMM-dd-HHmm"));
+                string zipName = String.Format("Comprimido_{0}.zip", DateTime.Now.ToString("yyyyMMdd-HHmm"));
                 using (MemoryStream memoryStream = new MemoryStream())
                 {
                     zip.Save(memoryStream);
